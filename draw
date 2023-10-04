@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+
+image = np.zeros((1080, 1920, 3), dtype=np.uint8) + 255
+
+cv2.line(image, (100, 100), (300, 100), (255, 0, 0), 2)
+
+cv2.rectangle(image, (50, 150), (150, 250), (0, 255, 0), -1)
+
+cv2.ellipse(image, (200, 300), (100, 50), 45, 0, 360, (0, 0, 255), 2)
+
+cv2.circle(image, (300, 200), 40, (0, 255, 255), -1)
+
+cv2.imshow("Shapes", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
